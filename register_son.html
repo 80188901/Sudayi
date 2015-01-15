@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script src="js/mui.min.js"></script>
+		 <script type="text/javascript" charset="utf-8">
+	      	mui.init();
+	    </script>
+		<style type="text/css">
+		body{
+    		font-family:'应用字体 Regular', '应用字体';
+    		background: #F2F2F2;
+    	}
+    
+		#register_form input[type=text]{
+    		height: 25px;
+    		border: none;
+    		border-bottom: 1px solid #999;
+    		width: 90%;
+    		display: block;
+    		margin: 0 auto ;
+    		margin-top: 20px;
+    		text-indent: 20px;
+    	}
+    	#register_form input[type=text]:empty{
+    		padding-left:2em;
+    	}
+    	#register_tel{
+    		background: #F2F2F2 url(images/tel.png) no-repeat 0.5% 50%;
+    		background-size: 30px 30px;
+    	}
+    	#register_button{
+			border-radius: 30px;
+    		display: block;
+    		width: 90%;
+    		height: 40px;
+    		margin: 20px auto 20px;
+    		background: #0099FF;
+    		color: #fff;
+    		font-size: 16px;
+    		font-weight: bold;
+    		border: none;
+    	}
+    	#register_ck{
+			float: right;
+			margin-top: -20px;
+			font-size: 13px;
+    	}
+    	.mui-input-row label~input, .mui-input-row label~select, .mui-input-row label~textarea{
+    		padding-left: 10px;
+    	}
+    	.register_footer{
+    		background: #F2F2F2;
+    		height: 30px;
+    		border: none;
+    		box-shadow: none;
+    		font-family: "font-family:'应用字体 Bold', '应用字体';";
+    	}
+    	#register_copy{
+    		width: 120px;
+    		display: block;
+    		float: right;
+    		margin-top: 10px;
+    		font-size: 16px;
+    	}			
+		</style>
+	</head>
+<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">标题</h1>
+		</header>
+		<div id="register_form" style="margin-top: 80px;">
+				<input type="text" name=""  id="register_tel" placeholder="请输入手机号"/>
+			    <button  id="register_button">获取手机验证码</button>
+				<div class="mui-input-row mui-checkbox mui-left" id="register_ck">
+				<label>我已阅读并同意《速达易供应商协议》</label>
+				<input name="checkbox" type="checkbox">
+		</div>
+		</div>
+		<nav class="mui-bar mui-bar-tab register_footer">
+			<span id="register_copy" style="font-family:'应用字体 Bold', '应用字体';">FacyShop 1.0</span>
+		</nav> 
+		<script>
+		var oldback = mui.back;
+		mui.back = function(){
+		    //恢复a页面的显示状态；
+		    mui.currentWebview.opener().show('none');
+		    //继续执行b页面原有的返回逻辑
+		    oldback();
+		}
+//		
+		document.getElementById("register_button").addEventListener('tap',function () {
+			//打开b页面
+			mui.openWindow({
+			    url:'sign_in.html',
+			    id:'sign_in'
+			});
+			//等b页面显示动画结束后，隐藏a页面；如下示例中的300毫秒，可根据b页面真实显示动画时间调整
+			setTimeout(function(){
+			    mui.currentWebview.hide('none');
+			},500);
+		});
+		</script>
+</body>

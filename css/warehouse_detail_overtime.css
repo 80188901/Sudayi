@@ -1,0 +1,241 @@
+	*{
+	    	margin: 0;
+	    	padding: 0;
+	    }
+	#provider_header{
+    		height: 90px;
+    		background: #fff;
+    	}
+    	#provider_blue{
+    		height: 10px;
+    		background: #304FFC;
+    	}
+    	#provider_nav{
+    		height: 40px;
+		background: #80CCFF;
+		position: relative;
+		z-index: 1;
+    	}
+    	#provider_list{
+    		height: 40px;
+    		background: #E7D8AA;
+    		position: relative;
+    		z-index: 0;
+    	}
+ 
+ 	#provider_nav span{
+    		color: #FFFFFF;
+    		font-size: 12px;
+    	}
+    	#provider_portrait{
+    		position: absolute;
+    		left: 4%;
+    		top: 5%;
+    	}
+    	#provider_name{
+    		position: absolute;
+    		top: 2%;
+    		left: 20%;
+    	}
+    	#provider_tel{
+    		position: absolute;
+    		top: 40%;
+    		left: 20%;
+    	}
+    	#provider_post{
+    		position: absolute;
+    		right: 2%;
+    		top: 2%;
+    	}
+    	#provider_level{
+    		position: absolute;
+    		right: 5%;
+    		top: 40%;
+    	}
+    	#provider_mark{
+    		position: absolute;
+    		right: 1%;
+    		top: 40%;
+    	}
+    	#provider_list span{
+    		display: block;
+    		font-size: 12px;
+    	}
+    	#provider_list .provider_list_top{
+    		position: absolute;
+    		top: 0;
+    		right: 0;
+    	}
+    	#provider_list .provider_list_bottom{
+    		position: absolute;
+    		top: 16px;
+    		right: 0;
+    	}
+    	
+	/*条款*/
+	#provider_clause{
+		font-size: 12px;
+		width: 90%;
+		margin: 0 auto;
+	}
+	#provider_clause span{
+		margin-top:10px;ß
+	}
+	#provider_clause .provider_clause_left{
+		float: left;
+	}
+	#provider_clause .provider_clause_right{
+		float:right;
+	}
+	
+	/*仓库认证时限*/
+	#overtime_approve{
+		height: 55px;
+		width: 96%;
+		margin: 0 auto;
+		margin-top: 10px;
+		border-bottom: 1px solid #CCCCCC;
+	}
+	#overtime_approve span{
+		display: block;
+	}
+	#overtime_approve .overtime_approve_top{
+		font-size: 14px;
+		font-weight: 700;
+		margin:15px 0 0 0;
+	}
+	#overtime_approve .overtime_approve_bottom{
+		font-size: 12px;
+		margin:5px 0 0 0;
+	}
+	#overtime_date{
+		margin-top: 5px;
+		background: #FFFFFF;
+		height: 50px;
+	}
+	#overtime_date .overtime_date_next,#overtime_date .overtime_date_due{
+		font-size: 14px;
+		font-weight: 700px;
+		float: left;
+		margin-left: 6px;
+	} 
+	#overtime_date .overtime_date_top,#overtime_date .overtime_date_bottom{
+		font-size: 12px;
+		font-weight: 400px;
+		float: right;
+		margin-right: 6px;
+	}
+	#overtime_date .overtime_date_bottom,#overtime_date .overtime_date_due{
+		margin-top: 5px;
+	}
+
+	/*上传证明文件*/
+	#paperwork{
+		margin-top: 10px;
+		height: 85px;
+		background: #FFFFFF;
+	}
+	#paperwork span{
+		display: block;
+	}
+	#paperwork .paperwork_file{
+		padding-top: 5px;
+		margin-left: 10px;
+		font-size: 14px;
+		font-weight: 700;
+	}
+	#paperwork .paperwork_trade{
+		margin-left: 10px;
+		font-size: 12px;
+		font-weight: 400;
+	}
+	#paperwork input{
+		margin-top: 15px;
+		margin-left: 10px;
+	}
+	#paperwork label{
+		font-size: 14px;
+		font-weight: 400;
+	}
+	#paperwork button{
+		width: 40px;
+		padding: 0;
+		height: 15px;
+		line-height: 15px;
+		float: right;
+		margin-top: 15px;
+		margin-right: 10px;
+	}
+	
+	/*选择延长的日期*/
+	#chose{
+		margin-top: 10px;
+		height: 85px;
+		background: #FFFFFF;
+	}
+	#chose span{
+		display: block;
+	}
+	#chose select{
+		width: 25%;
+		height: 20px;
+		float: left;
+		background: #F8F8F8;
+		margin-left: 10px;
+		margin-top: 10px;
+	}
+	#chose p{
+		margin-top: 10px;
+		float: left;
+	}
+	#chose .chose_date{
+		font-size: 14px;
+		font-weight: 700;
+		margin-left: 10px;
+		padding-top: 5px;
+	}
+	#chose .chose_time{
+		font-size: 12px;
+		font-weight: 400;
+		margin-left: 10px;
+	}
+	
+	/*按钮*/
+	#button{
+		width: 90%;
+		margin:0 auto;
+		margin-top: 10px;
+		font-size:12px;
+		font-weight: 400;
+	}
+	#button button{
+		width: 40%;
+		font-size: 12px;
+		font-weight: 400;
+	}
+	#button span{
+		float: right;
+		margin-top: 5px;
+		margin-right: 5px;
+	}
+	
+	
+	/*条款*/
+	#provider_clause{
+		font-size: 12px;
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 20%;
+	}
+	#provider_clause span{
+		margin-top:10px;ß
+	}
+	#provider_clause .provider_clause_left{
+		float: left;
+	}
+	#provider_clause .provider_clause_right{
+		float:right;
+	}
+	
+  
+  	

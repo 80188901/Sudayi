@@ -1,0 +1,103 @@
+*{
+	    	margin: 0;
+	    	padding: 0;
+	    }
+	    body{
+	    	font-family:'应用字体 Bold', '应用字体';
+	    	background: #F2F2F2;
+	    }
+    	#provider_header{
+    		height: 120px;
+    		background: #fff;
+    	}
+    	#provider_nav{
+    		height: 40px;
+			background: #80CCFF;
+			position: relative;
+			z-index: 0;
+    	}
+    	#provider_list{
+    		height: 70px;
+    		background: #fff;
+    		z-index: 9999;
+    	}
+    	#provider_nav span{
+    		color: #FFFFFF;
+    		font-size: 12px;
+    	}
+    	#provider_portrait{
+    		position: absolute;
+    		left: 4%;
+    		top: 5%;
+    	}
+    	#provider_name{
+    		position: absolute;
+    		top: 2%;
+    		left: 20%;
+    	}
+    	#provider_tel{
+    		position: absolute;
+    		top: 40%;
+    		left: 20%;
+    	}
+    	#provider_post{
+    		position: absolute;
+    		right: 2%;
+    		top: 2%;
+    	}
+    	#provider_level{
+    		position: absolute;
+    		right: 5%;
+    		top: 40%;
+    	}
+    	#provider_header ul{
+    		width: 99%;
+    		margin: 0 auto;
+    		/*margin-left: 10px;*/
+    		text-align: center;
+    		padding-top: 20px;
+    	}
+    
+    	#provider_header li{
+    		display: inline-block;
+    		border-left: 1px solid #B9B9B9;
+    	}
+    	#provider_header ul li span{
+    		display: block;
+    		font-size: 12px;
+    		margin:0 10px;
+    		margin-top: -5px;
+    	} 
+    	#provider_info{
+    		height: 50px;
+    		background: #F2F2F2 ;
+    		border-top:1px solid #999999 ;
+    		border-bottom: 1px solid #999999;
+    	}
+    	#provider_upload{
+    		background: #B3E2F4;
+    	}
+    	#provider_location{
+    		background: #F0E1B3;
+    	}
+    	#provider_order{
+    		background: #B3FFB3;
+    	}
+    	.mui-table-view-cell:after {
+    		left: 0;
+    	}
+    	font{
+    		color: #FA6600;
+    	}
+    	.provider_common{
+    		background: #B5B5B5;
+    	}
+    	#provider_mark{
+    		position: absolute;
+    		right: 1%;
+    		top: 40%;
+    	}
+    	#provider_blue{
+    		height: 10px;
+    		background: #304FFC;
+    	}

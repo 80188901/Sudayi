@@ -1,0 +1,64 @@
+	body{
+    		font-family:'应用字体 Regular', '应用字体';
+    		background: #F2F2F2;
+    	}
+    	#register_form input[type=text]{
+    		height: 25px;
+    		border: none;
+    		border-bottom: 1px solid #999;
+    		width: 90%;
+    		display: block;
+    		margin: 0 auto ;
+    		margin-top: 20px;
+    		text-indent: 20px;
+    	}
+    	#register_form input[type=text]:empty{
+    		padding-left:2em;
+    	}
+    	#register_tel{
+    		background: #F2F2F2 url(../images/tel.png) no-repeat 0.5% 50%;
+    		background-size: 30px 30px;
+    	}
+    	#register_button{
+			border-radius: 30px;
+    		display: block;
+    		width: 90%;
+    		height: 40px;
+    		margin: 20px auto 20px;
+    		background: #0099FF;
+    		color: #fff;
+    		font-size: 16px;
+    		font-weight: bold;
+    		border: none;
+    	}
+    	#register_ck{
+			float: right;
+			margin-top: -20px;
+			font-size: 13px;
+    	}
+    	.mui-input-row label~input, .mui-input-row label~select, .mui-input-row label~textarea{
+    		padding-left: 10px;
+    	}
+    	.register_footer{
+    		background: #F2F2F2;
+    		height: 30px;
+    		border: none;
+    		box-shadow: none;
+    		font-family: "font-family:'应用字体 Bold', '应用字体';";
+    	}
+    	#register_copy{
+    		width: 120px;
+    		display: block;
+    		float: right;
+    		margin-top: 10px;
+    		font-size: 16px;
+    	}
+    	html,body {
+			background-color: #efeff4;
+		}
+		header.mui-bar{
+			display: none;
+		}
+		.mui-bar-nav~.mui-content{
+			padding: 0;
+		}
