@@ -9,9 +9,8 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<link rel="stylesheet" href="css/mui.min.css">
 		<script src="js/mui.min.js"></script>
-		 <script type="text/javascript" charset="utf-8">
-	      	mui.init();
-	    </script>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="js/common.js"></script>
 		<style type="text/css">
 		body{
     		font-family:'应用字体 Regular', '应用字体';
@@ -96,16 +95,24 @@
 		    oldback();
 		}
 //		
-		document.getElementById("register_button").addEventListener('tap',function () {
-			//打开b页面
-			mui.openWindow({
-			    url:'sign_in.html',
-			    id:'sign_in'
+		document.querySelector('#register_button').addEventListener('tap', function(event) {
+				
+				var mobile = $("#register_tel").val();
+				mui.get(serverURL+'mobile_admin/mobile_login/judge_same_mobile',{mobile:mobile},
+				function(data){
+					
+					if(data){
+						setItem('tel',data);
+					mui.openWindow({
+					    url:'sign_in.html',
+					    id:'sign_in.html',
+					});
+					
+					}else{
+						alert("该用户名已经存在！");
+					}
+					},'json'
+				);
 			});
-			//等b页面显示动画结束后，隐藏a页面；如下示例中的300毫秒，可根据b页面真实显示动画时间调整
-			setTimeout(function(){
-			    mui.currentWebview.hide('none');
-			},500);
-		});
 		</script>
 </body>

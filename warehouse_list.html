@@ -1,38 +1,94 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	 	<meta charset="utf-8">  
-	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 	    <title></title>
 	    <script src="js/mui.min.js"></script>
 	    <link href="css/mui.min.css" rel="stylesheet"/>
 	    <link rel="stylesheet" href="css/base.css" />
+	    <link rel="stylesheet" type="text/css" href="css/warehouse_header.css"/>
 	    <link rel="stylesheet" href="css/warehouse_list.css" />
-		<title></title>
+		<title>仓库管理</title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$(".set_show").click(function(){
+					$("#set").toggle(1000);
+				})
+			})
+		</script>
 	</head>
 	<body>
-		
-		<div id="provider_header">
-				<div id="provider_blue"></div>
-				<div id="provider_nav">
-					<img src="images/portrait.png" id="provider_portrait"/>
-					<span id="provider_name">设置名称</span>
-					<span id="provider_tel">13711111111</span>
-					<span id="provider_post">管理员</span>
-					<span id="provider_level">个人供应商</span>
-					<img src="images/provider.png" alt="" width="20" height="20" id="provider_mark"/>
-				</div>
-				
-				<div id="provider_list">
-					<span class="provider_list_top">010100000001</span>
-					<span class="provider_list_bottom">深圳市罗湖区建设路1000号</span>
-				</div>
-				
-				<div id="provider_confirm">
-					<span class="provider_confirm_top">管理以下A级商品</span>
-					<span class="provider_confirm_bottm">A级商品的更多设置或更改请登录速达易PC端操作</span>
-				</div>
-				
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">仓库管理</h1>
+		</header>
+		<div class="mui-content">
+			<div class="warehouse_info">
+			<div class="info_one">
+				<span class="info_top">深圳市</span>
+				<span>001</span>
 			</div>
-	</body>
+			<div class="info_two">
+				<span class="info_top">罗湖区</span>
+				<span>001</span>
+			</div>
+			<div class="info_three">
+				<span class="info_top">建设路1000号美丽小店</span>
+				<span>00000001</span>
+			</div>
+			<div class="mui-switch info_four">
+			  <div class="mui-switch-handle"></div>
+			</div>
+		</div>
+		
+		<div class="warehouse_info">
+			<div class="info_one">
+				<span class="info_top">深圳市</span>
+				<span>001</span>
+			</div>
+			<div class="info_two">
+				<span class="info_top">罗湖区</span>
+				<span>001</span>
+			</div>
+			<div class="info_three">
+				<span class="info_top">建设路1000号美丽小店</span>
+				<span>00000001</span>
+			</div>
+			<div class="mui-switch info_four">
+			  <div class="mui-switch-handle"></div>
+			</div>
+		</div>
+		</div>
+		
+		
+		
+		<div id="set">
+			<div class="set_item">
+				<span class="set_left set_top">所有仓库暂时开启/关闭</span>
+				<div class="mui-switch set_right set_only_top" >
+				  <div class="mui-switch-handle"></div>
+				</div>
+			</div>
+			<div class="set_item">
+				<span class="set_left set_top">添加一个新仓库（取货点）</span>
+				<img src="images/u57 (1).png" alt="" width="28" height="30" class="set_right set_img_top" "/>
+			</div>
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+			  <a class="mui-tab-item mui-active mui-action-back" href="#tabbar">
+					<span class="mui-icon mui-icon-arrowleft"></span>
+					<span class="mui-tab-label" >返回</span>
+				</a>
+				<a class="mui-tab-item" href="#tabbar-with-chat">
+					<span class="mui-icon mui-icon-home"></span>
+					<span class="mui-tab-label">首页</span>
+				</a>
+				<a class="mui-tab-item set_show" href="#tabbar-with-map" >
+					<span class="mui-icon mui-icon-settings"></span>
+					<span class="mui-tab-label">设置</span>
+				</a>
+		</nav>
+	</body>	
 </html>

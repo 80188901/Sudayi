@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">  
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/upload_goods.css"/>
+		<title>人员管理2</title>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		  <a class="mui-icon mui-icon-left-nav mui-pull-left mui-action-back "></a>
+		  <h1 class="mui-title">商品上传</h1>
+		</header>
+		
+		<div class="mui-content">
+			<ul class="mui-table-view mui-table-view-chevron" style="margin-top: 12px;color: #666666;">
+					<li class="mui-table-view-cell" id="upload_general_goods" onclick="jump('upload_general_goods','upload_general_goods.html')">
+						<a class="mui-navigate-right">
+							<span class="upload_name big_font">上传普通商品</span>
+						</a>
+					</li>
+			</ul>
+			
+			<div class="upload_brand">
+				<span class="upload_goods big_font" id="">上传普通商品</span>
+				<span class="upload_confirm big_font">您尚未认证企业供应商不能使用</span>
+				<button class="upload_upgrade">立即升级认证</button>
+				<br class="clear" />
+			</div>
+			
+		</div>
+		
+		
+		<nav class="mui-bar mui-bar-tab">
+			  <a class="mui-tab-item mui-active" href="#tabbar">
+					<span class="mui-icon mui-icon-arrowleft"></span>
+					<span class="mui-tab-label">返回</span>
+				</a>
+				<a class="mui-tab-item" href="#tabbar-with-chat">
+					<span class="mui-icon mui-icon-home"></span>
+					<span class="mui-tab-label">首页</span>
+				</a>
+				<a class="mui-tab-item set_show" href="#tabbar-with-map" >
+					<span class="mui-icon mui-icon-settings"></span>
+					<span class="mui-tab-label">设置</span>
+				</a>
+		</nav>
+		<script src="js/jump.js"></script>
+	</body>
+</html>

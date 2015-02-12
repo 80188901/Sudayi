@@ -1,0 +1,33 @@
+.confirm{
+	height: 20px;
+	line-height: 35px;
+}
+.button_box{
+	text-align: center;
+}
+.button_box button{
+	width: 45%;
+	margin-top: 10px;
+	background: #0099FF;
+	color: #FFFFFF;
+}
+.info_wait span{
+	float: right;
+	margin-top: 20px;
+	margin-right: 10px;
+}
+.add_img{
+	width: 20px;
+	height: 20px;
+	margin-top: 10px;
+	margin-left: 20px;
+	float: left;
+}
+.confirm_content{
+	display: block;
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-size: 14px;
+	color: #666;
+}

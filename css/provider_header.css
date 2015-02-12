@@ -1,0 +1,30 @@
+#provider_header{
+	height: 70px;
+	background: #F9F9F9;
+	position: relative;
+}
+#provider_header span{
+	position: absolute;
+	color: #666666;
+}
+.header_photo{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+.header_name{
+	top: 10px;
+	left:70px;
+}
+.header_tel{
+	top: 25px;
+	left: 70px;
+}
+.header_company{
+	top: 10px;
+	right: 5px;
+}
+.header_job{
+	top: 25px;
+	right: 5px;
+}

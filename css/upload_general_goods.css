@@ -1,0 +1,20 @@
+.confirm{
+	color: #66656F;
+	height: 20px;
+	line-height: 35px;
+	text-indent: 24px;
+}
+.mui-navigate-right p{
+	color: #716565;
+}
+.mui-navigate-right span{
+	font-size: 12px;
+	color: #666666;
+}
+.mui-navigate-right span:nth-child(2){
+	float: left;
+}
+.mui-navigate-right span:nth-child(3){
+	float: right;
+}
+

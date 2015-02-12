@@ -1,131 +1,83 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <title></title>
-    <script src="js/mui.min.js"></script>
-    <link href="css/mui.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" type="text/css" href="css/provider_index.css"/>
-    </head>
+	<head>
+		<meta charset="utf-8">
+		 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title>供应商登陆后首页</title>
+	    <script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" href="css/base.css" />
+	    <link rel="stylesheet" type="text/css" href="css/provider_index.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/provider_header.css"/>
+	</head>
 	<body>
-		<header class="mui-bar mui-bar-nav">
-			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1 class="mui-title">标题</h1>
-		</header>ß
-		<div class="mui-content">
-			<div id="provider_header">
-				<div id="provider_blue"></div>
-				<div id="provider_nav">
-					<img src="images/portrait.png" id="provider_portrait"/>
-					<span id="provider_name">设置名称</span>
-					<span id="provider_tel">13711111111</span>
-					<span id="provider_post">管理员</span>
-					<span id="provider_level">个人供应商</span>
-					<img src="images/provider.png" alt="" width="20" height="20" id="provider_mark"/>
-				</div>
-				<div id="provider_list">
-					<ul>
-						<li>
-							<span>0</span>
-							<span>库存</span>
-						</li>
-						<li>
-							<span>0</span>
-							<span>库存</span>
-						</li>
-						<li>
-							<span>0</span>
-							<span>库存</span>
-						</li>
-						<li>
-							<span>0</span>
-							<span>库存</span>
-						</li>
-						<li>
-							<span style="text-align: right;">13:45:22</span>
-							<span>2014.12.12 WED</span>
-						</li>
-					</ul>
-				</div>
-			</div>
-			
-			<div id="provider_info">
-				<div id="provider_info_con" style="height: 40px;background: #F2F2F2 url(images/u10.png) no-repeat 96%;;margin:4px 0;background-size: 40px 40px;">
-					<p style="font-size:16px;color:#323232;text-align: center;padding-top:10px;font-weight: bold;"><font>1张</font>新订单共<font>￥300元</font>等待您的确认</p>
-				</div>
-				
-			</div>
-			
-			<ul class="mui-table-view">
-				<li class="mui-table-view-cell mui-media">
-					<a href="#">
-						<img class="mui-media-object mui-pull-left" src="images/upload.png" id="provider_upload">
-						<div class="mui-media-body">
-							上传
-							<p class='mui-ellipsis'>发布商品</p>
-							<p style="float: right;margin-top: -40px;">今日上传0件</p>
-						</div>
+		<div id="provider_header">
+			<img src="images/u60.png" alt="" class="header_photo"/>
+			<span class="little_font header_name">杨晓明</span>
+			<span class="little_font header_tel">13800000000</span>
+			<span class="little_font header_company">深圳市美丽佳有限公司</span>
+			<span class="little_font header_job"><img src="images/u58.png" width="16" height="16" style="position: absolute;left: -15px;top: 2px;"/>管理员</span>
+		</div>
+		<ul class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell" id="upload_goods" onclick="jump('upload_goods','upload_goods.html')" >
+					<a class="mui-navigate-right" >
+					<img src="images/u14.png" width="30" height="30"/>
+						<span class="menu_title" >上传</span>
+						<span class="menu_des little_font">共03个商品</span>
 					</a>
 				</li>
-				<li class="mui-table-view-cell mui-media">
-					<a href="#">
-						<img class="mui-media-object mui-pull-left" src="images/location.png" id="provider_location">
-						<div class="mui-media-body">
-							仓库
-							<p class='mui-ellipsis'>管理库存</p>
-							<p style="float: right;margin-top: -40px;">共有0个仓库</p>
-							<p style="float: right;margin-top: -20px;">0款商品告急</p>
-						</div>
+				<li class="mui-table-view-cell" id="warehouse" onclick="jump('warehouse','warehouse_list.html')">
+					<a class="mui-navigate-right">
+					<img src="images/u16.png" width="30" height="30"/>
+						<span class="menu_title">仓库</span>
+						<span class="menu_des little_font">共03个仓库</span>
 					</a>
 				</li>
-				<li class="mui-table-view-cell mui-media">
-					<a href="#">
-						<img class="mui-media-object mui-pull-left" src="images/order.png" id="provider_order">
-						<div class="mui-media-body">
-							订单
-							<p class='mui-ellipsis'>查看订单状态</p>
-							<p style="float: right;margin-top: -40px;">今日共有0个新订单</p>
-							<p style="float: right;margin-top: -20px;">有0个订单正在配送</p>
-						</div>
+				<li class="mui-table-view-cell" id="order" onclick="jump('order','order.html')">
+					<a class="mui-navigate-right">
+					<img src="images/u24.png" width="30" height="30"/>	
+						<span class="menu_title big_font">订单</span>
+						<span class="menu_des little_font">今日0订单</span>
 					</a>
 				</li>
-				<li style="height: 30px;background: #F2F2F2;"></li>
-				<li class="mui-table-view-cell mui-media" >
-					<a href="#">
-						<img class="mui-media-object mui-pull-left provider_common" src="images/user.png" >
-						<div class="mui-media-body">
-							员工
-							<p class='mui-ellipsis'>管理员工</p>
-							<p style="float: right;margin-top: -40px;">共有0个员工</p>
-						</div>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+					<img src="images/u36.png" width="30" height="30"/>	
+						<span class="menu_title big_font">员工</span>
+						<span class="menu_havetwo little_font">0人休息中</span>
+						<br class="clear" />
+						<span class="menu_havetwo little_font menu_two_bottom">3人当值中</span>
 					</a>
 				</li>
-				<li class="mui-table-view-cell mui-media">
-					<a href="#">
-						<img class="mui-media-object mui-pull-left provider_common" src="images/brand.png" >
-						<div class="mui-media-body">
-							品牌
-							<p class='mui-ellipsis'>品牌认证</p>
-							<p style="float: right;margin-top: -40px;">已认证0个品牌</p>
-						</div>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+					<img src="images/u41.png" width="30" height="30"/>	
+					<span class="menu_title big_font">品牌</span>
+					<span class="menu_des little_font">共03个品牌</span>
 					</a>
 				</li>
-				<li class="mui-table-view-cell mui-media">
-					<a href="#">
-						<img class="mui-media-object mui-pull-left provider_common" src="images/material.png" >
-						<div class="mui-media-body">
-							素材
-							<p class='mui-ellipsis'>暂存的素材</p>
-						</div>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+					<img src="images/u45.png" width="30" height="30"/>	
+						<span class="menu_title big_font">素材</span>
 					</a>
 				</li>
 			</ul>
 			
-			<div style="height: 30px;background: #CCCCCC;"></div>
-			<div style="height: 10px;background: #66B4D3;"></div>
-		</div>
-		
-		
+			<nav class="mui-bar mui-bar-tab">
+			  <a class="mui-tab-item mui-active mui-action-back" href="#tabbar">
+					<span class="mui-icon mui-icon-arrowleft"></span>
+					<span class="mui-tab-label">返回</span>
+				</a>
+				<a class="mui-tab-item" href="#tabbar-with-chat">
+					<span class="mui-icon mui-icon-home"></span>
+					<span class="mui-tab-label">首页</span>
+				</a>
+				<a class="mui-tab-item" href="#tabbar-with-map">
+					<span class="mui-icon mui-icon-settings"></span>
+					<span class="mui-tab-label">设置</span>
+				</a>
+			</nav>
+			<script src="js/jump.js"></script>
 	</body>
 </html>

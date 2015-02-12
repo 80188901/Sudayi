@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">  
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title></title>
+	    <script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/upload_general_goods.css"/>
+		<title>上传普通商品</title>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		  <a class="mui-icon mui-icon-left-nav mui-pull-left mui-action-back"></a>
+		  <h1 class="mui-title">上传普通商品</h1>
+		</header>
+		
+		<div class="mui-content">
+			<p class="confirm">选择上传的商品图片等级</p>
+			<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell" id="upload_level" onclick="jump('upload_level','upload_level.html')">
+						<a class="mui-navigate-right">
+							<p>A级图片组</p>
+							<span>至少上传3张优质图片</span>
+							<span>展示频率最高</span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell" onclick="jump('upload_level','upload_level.html')>
+						<a class="mui-navigate-right">
+							<p>B级图片组</p>
+							<span>至少上传1张优质图片</span>
+							<span>展示频率最高</span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell" onclick="jump('upload_level','upload_level.html')>
+						<a class="mui-navigate-right">
+							<p>C级图片组</p>
+							<span>随拍即可上传</span>
+							<span>拍照即可上传</span>
+						</a>
+					</li>
+			</ul>
+		</div>
+		
+		
+		<nav class="mui-bar mui-bar-tab">
+			  <a class="mui-tab-item mui-active" href="#tabbar">
+					<span class="mui-icon mui-icon-arrowleft"></span>
+					<span class="mui-tab-label">返回</span>
+				</a>
+				<a class="mui-tab-item" href="#tabbar-with-chat">
+					<span class="mui-icon mui-icon-home"></span>
+					<span class="mui-tab-label">首页</span>
+				</a>
+				<a class="mui-tab-item set_show" href="#tabbar-with-map" >
+					<span class="mui-icon mui-icon-settings"></span>
+					<span class="mui-tab-label">设置</span>
+				</a>
+		</nav>
+		<script src="js/jump.js"></script>
+	</body>
+</html>

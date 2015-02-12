@@ -1,0 +1,6 @@
+.mui-table-view-chevron li{
+	height: 60px;
+}
+.mui-table-view-chevron li .mui-navigate-right:after, .mui-push-right:after{
+	top: 30px;
+}

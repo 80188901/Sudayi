@@ -1,7 +1,7 @@
 // JavaScript Document
 
 //网站的主域名
-   var serverURL = 'http://192.168.1.113/';
+   var serverURL = 'http://shop.29mins.com/';
 
 /*
 写入loclstorage缓存
@@ -22,3 +22,9 @@ function getItem(key){
 	// alert(a);
 	return localStorage.getItem(key);
 }
+
+plus.key.addEventListener('backbutton',function(){
+		if(confirm('确认退出？')){
+			plus.runtime.quit();
+		}
+},false);

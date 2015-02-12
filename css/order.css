@@ -1,0 +1,64 @@
+#order_plan{
+	height: 50px;
+	background: #FFFFFF;
+}
+#order_plan ul li{
+	float: left;
+	line-height: 50px;
+	text-align: center;
+}
+.order_plan_left{
+	width: 35%;
+}
+.order_plan_middle{
+	border-left: 1px solid #EEEEEE;
+	width: 30%;
+	border-right: 1px solid #EEEEEE;
+}
+.order_plan_right{
+	width: 35%;
+}
+.menu_left,.menu_middle,.menu_right{
+	float: left;
+	height: 50px;
+	line-height: 50px;
+}
+.menu_left{
+	margin-left: -10px;
+	text-align: center;
+	width: 16%;
+	border: 1px solid #7A7A7A;
+	border-radius: 50px;
+}
+.menu_middle{
+	width: 58%;
+}
+.menu_right{
+	width: 26%;
+}
+.menu_font_top,.menu_font_bottom{
+	display: block;
+}
+.menu_font_top{
+	margin-top: -8px;
+}
+.menu_font_bottom{
+	margin-top: -38px;
+}
+.mui-table-view span{
+	display: block;
+}
+.mui-table-view font{
+	color: red;
+}
+.menu_top{
+	margin-top: -10px;
+	text-indent: 5px;
+}
+.menu_bottom{
+	margin-top: -30px;
+	text-indent: 5px;
+	white-space:nowrap; 
+	text-overflow:ellipsis;
+	overflow:hidden;
+}

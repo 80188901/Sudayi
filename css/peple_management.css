@@ -1,0 +1,19 @@
+.mui-navigate-right span{
+	display: block;
+	font-size: 14px;
+	margin-top: 5px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	white-space:nowrap;
+	width: 100%;
+}
+.mui-navigate-right dl dd:nth-child(1){
+	width: 70%;
+	float: left;
+	
+}
+.mui-navigate-right dl dd:nth-child(2){
+	width: 30%;
+	float: left;
+}

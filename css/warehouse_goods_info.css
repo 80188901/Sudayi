@@ -1,0 +1,68 @@
+/*搜索*/
+#search{
+	height: 50px;
+	width: 96%;
+	margin: 0 auto;
+	border-bottom: 1px solid #CCCCCC;
+}
+#search_text{
+	margin-top: 12px;
+	width: 75%;
+	height: 25px;
+	padding: 0;
+}
+#search_button{
+	float: right;
+	margin-top: 12px;
+	width: 23%;
+	height: 25px;
+	line-height: 25px;
+	padding: 0;
+}
+.goods_list{
+	margin-top: 10px;
+	height: 100px;
+	background: #FFFFFF;
+}
+.goods_list .goods_pic{
+	margin: 8px 5px;
+	display: block;
+	float: left;
+}
+.goods_list span{
+	margin-top: 5px;
+	display: block;
+	float: left;
+	font-weight: 400;
+	font-size: 12px;
+	margin-left: 10px;
+}
+.goods_list .goods_list_name,.goods_list .goods_list_price{
+	font-size: 14px;
+	font-weight: 700;
+}
+.goods_list_type,.goods_list_percent{
+	font-size: 12px;
+	font-weight: 400;
+}
+.goods_list button{
+	margin-left: 20px;
+	width: 50px;
+	height: 20px;
+	line-height: 20px;
+	padding: 0;
+	font-size: 12px;
+}
+.goods_list .goods_list_green{
+	color: green;
+	font-weight: 700;
+}
+.goods_list .goods_list_name{
+	width: 40%;
+}
+.goods_list .goods_list_price{
+	width: 20%;
+}
+.goods_list .min{
+	margin-top: -8px;
+}

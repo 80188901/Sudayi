@@ -1,0 +1,45 @@
+.mui-content p{
+	height: 30px;
+	line-height: 40px;
+}
+.manage_name{
+	float: left;
+	margin-left: 10px;
+}
+.manage_num{
+	float: right;
+	margin-right: 20px;
+}
+dl{
+	background: #FFFFFF;
+	color: #666666;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #CCCCCC;
+}
+dl dd:nth-child(1){
+	float: left;
+	margin-left: 10px;
+}
+dl dd:nth-child(2){
+	float: right;
+	margin-right: 20px;
+}
+.img_box{
+	text-align: center;
+	background: #FFFFFF;
+	height: 130px;
+}
+.manage_img{
+	margin-top: 10px;
+	width: 100px;
+	height: 100px;
+}
+.manage_button{
+	display: block;
+	color: #FFFFFF;
+	background: #999999;
+	width: 90%;
+	margin: 10px auto;
+}
+

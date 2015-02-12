@@ -1,0 +1,29 @@
+.mui-table-view-chevron li{
+	height: 60px;
+}
+.mui-table-view-chevron li .mui-navigate-right:after, .mui-push-right:after{
+	top: 30px;
+}
+.menu_left{
+	line-height: 40px;
+	float: left;
+}
+.menu_right_left,.menu_right_middle,.menu_right_right{
+	float: right;
+}
+.menu_right_left{
+	margin-top: -8px;
+}
+.menu_right_middle{
+	margin-top: -32px;
+}
+.menu_right_right{
+	margin-top: -36px;
+}
+.menu_right_top{
+	float: right;
+}
+.menu_right_bottom{
+	margin-top: -26px;
+	float: right;
+}

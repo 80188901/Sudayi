@@ -1,0 +1,77 @@
+#warehouse_info{
+	background: #FFFFFF;
+	height: 40px;
+	color: #666666;
+	margin-top: 10px;
+}
+#warehouse_info li{
+	background: #FFFFFF;
+	height: 35px;
+	float: left;
+}
+.warehouse_info_left{
+	width: 60%;
+}
+.warehouse_info_right{
+	width: 40%;
+}
+#warehouse_info span{
+	display: block;
+}
+.warehouse_info_top,.warehouse_info_bottom{
+	margin-left: 12px;
+}
+.warehouse_info_bottom{
+	margin-top: -5px;
+}
+.warehouse_info_right_left{
+	float: left;
+	margin-left: 10px;
+}
+.warehouse_info_right_right{
+	float: right;
+	margin-right: 10px;
+}
+.mui-navigate-right{
+	height: 60px;
+}
+.menu_img{
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	top: 5px;
+	left: 0;
+}
+.menu_goods{
+	position: absolute;
+	top: 10px;
+	left: 15%;
+}
+.menu_size{
+	position: absolute;
+	top: 25px;
+	left: 15%;
+}
+.menu_way{
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	line-height: 40px;
+	text-align: center;
+	font-size: 12px;
+	color: #666666;
+	height: 40px;
+	border-radius: 40px;
+	width: 40px;
+	border: 1px solid #838383;
+}
+.menu_price{
+	position: absolute;
+	left: 66%;
+	top: 10px;
+}
+.menu_discount{
+	position: absolute;
+	left: 66%;
+	top: 26px;
+}

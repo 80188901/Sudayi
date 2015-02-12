@@ -1,0 +1,38 @@
+#warehouse_header{
+	height: 130px;
+	background: #FFFFFF;
+}
+.warehouse_photo_box{
+	float: left;
+	width: 40%;
+	height: 130px;
+}
+.warehouse_header_top{
+	float: left;
+	width: 58%;
+	height: 65px;
+}
+.warehouse_header_bottom{
+	float: left;
+	width: 58%;
+	height: 65px;
+}
+.warehouse_header_top span{
+	position: absolute;
+}
+.warehouse_name{
+	top: 10px;
+	left: 0;
+}
+.warehouse_tel{
+	top: 10px;
+	left: 50px;
+}
+.warehouse_job{
+	top: 10px;
+	right: 0px;
+}
+.warehouse_company{
+	bottom: 10px;
+	left: 0;
+}

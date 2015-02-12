@@ -1,97 +1,64 @@
-	*{
-	    	margin: 0;
-	    	padding: 0;
-	    }
-	#provider_header{
-    		height: 90px;
-    		background: #fff;
-    	}
-    	#provider_blue{
-    		height: 10px;
-    		background: #304FFC;
-    	}
-    	#provider_nav{
-    		height: 40px;
-		background: #80CCFF;
-		position: relative;
-		z-index: 1;
-    	}
-    	#provider_list{
-    		height: 40px;
-    		background: #E7D8AA;
-    		position: relative;
-    		z-index: 0;
-    	}
- 
- 	#provider_nav span{
-    		color: #FFFFFF;
-    		font-size: 12px;
-    	}
-    	#provider_portrait{
-    		position: absolute;
-    		left: 4%;
-    		top: 5%;
-    	}
-    	#provider_name{
-    		position: absolute;
-    		top: 2%;
-    		left: 20%;
-    	}
-    	#provider_tel{
-    		position: absolute;
-    		top: 40%;
-    		left: 20%;
-    	}
-    	#provider_post{
-    		position: absolute;
-    		right: 2%;
-    		top: 2%;
-    	}
-    	#provider_level{
-    		position: absolute;
-    		right: 5%;
-    		top: 40%;
-    	}
-    	#provider_mark{
-    		position: absolute;
-    		right: 1%;
-    		top: 40%;
-    	}
-    	#provider_list span{
-    		display: block;
-    		font-size: 12px;
-    	}
-    	#provider_list .provider_list_top{
-    		position: absolute;
-    		top: 0;
-    		right: 0;
-    	}
-    	#provider_list .provider_list_bottom{
-    		position: absolute;
-    		top: 16px;
-    		right: 0;
-    	}
-    	
-    	
-    	/*管理以下A级商品*/
-    	#provider_confirm{
-    		height: 60px;
-    		width: 98%;
-    		margin:0 auto;
-    		border-bottom: 1px solid #CCCCCC;
-    		position: relative;
-    	}
-    	#provider_confirm .provider_confirm_top{
-    		display: block;
-    		font-size: 14px;
-    		font-weight: bold;
-    		position: absolute;
-    		top: 10px;
-    		left: 0;
-    	}
-    	#provider_confirm .provider_confirm_bottm{
-    		display: block;
-    		font-size: 12px;
-    		position: absolute;
-    		top: 30px;
-    	}
+.warehouse_info{
+	height: 60px;
+	background: #FFFFFF;
+	border-bottom: 1px solid #CCCCCC;
+}
+.warehouse_info span{
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+	color: #666666;
+}
+.info_one{
+	margin-left: 8px;
+}
+.info_one,.info_two,.info_three{
+	height: 60px;
+	float: left;
+}
+.info_one,.info_two{
+	width: 15%;
+}
+.info_four{
+	margin-top: 15px;
+	float: right;
+}
+.info_top{
+	margin-top: 10px;
+}
+#set{
+	display: none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 50px;
+	height: 80px;
+	background: #F7F7F7;
+}
+#set span{
+	margin-left: 20px;
+	font-size: 16px;
+	font-weight: 700;
+	color: #666666;
+}
+#set .set_item{
+	height: 40px;
+	border-bottom: 1px solid #CCCCCC;
+}
+#set .set_top{
+	margin-top: 10px;
+}
+#set .set_only_top{
+	margin-top: 5px;
+	margin-right: 15px;
+}
+#set .set_left{
+	float: left;
+}
+#set .set_right{
+	float: right;
+}
+#set .set_img_top{
+	margin-top: 3px;
+	margin-right: 15px;
+}

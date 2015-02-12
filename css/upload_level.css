@@ -1,0 +1,25 @@
+.confirm{
+	height: 20px;
+	line-height: 35px;
+}
+.img_list{
+	background: #FFFFFF;
+}
+.upload_img{
+}
+.basics{
+	background: #FFFFFF;
+}
+.basics input[type=text]{
+	margin: 0;
+	padding: 0;
+	border: none;
+	height: 40px;
+	line-height: 40px;
+	text-indent: 12px;
+}
+.mui-table-view-cell{
+	color: #999999;
+	font-size: 14px;
+}
+

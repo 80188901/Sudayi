@@ -10,8 +10,9 @@
     <link rel="stylesheet" type="text/css" href="css/sign_in.css"/>
 	<script src="js/common.js"></script>
 	<script type="text/javascript" charset="utf-8">
-      	mui.init();
+      	
     </script>
+    <title>注册页2</title>
     </head>
 	<body>
 		<header class="mui-bar mui-bar-nav">
@@ -19,10 +20,11 @@
 		<h1 class="mui-title">标题</h1>
 	</header>
 		<div id="sign_in_form">
-			<p>手机号码：13711111111</p>
+			<p class="sign_tel">手机号码：13711111111</p>
 			<input type="text" name="" id="sign_in_code" placeholder="请输入手机验证码"/>
 			<p class="p_top">忘记密码可通过短信找回</p>
 			<input type="password" name="" id="sign_in_pwd" placeholder="设定您的登陆密码"/>
+			<input type="password" name="" id="sign_in_apwd" placeholder="再次输入登陆密码"/>
 			<p class="p_top">精准选择地区会带来更多生意</p>
 			<div id="sign_in_select">
 				<img src="images/location.png" alt="" width="30" height="30" id="sign_in_loaction"/>
@@ -36,6 +38,8 @@
 				<option value="">请选择</option>
 			</select>
 			</div>
+			
+			<button id="register_button" >完成注册</button>
 		</div>
 		
 		<nav class="mui-bar mui-bar-tab register_footer">
@@ -43,6 +47,19 @@
 		</nav> 
 		
 		<script>
+			var tel=getItem('tel');
+			$(".sign_tel").html(tel);
+			mui.get(serverURL+'mobile_admin/mobile_login/get_province_in_china',
+			function(data){
+				var str="";
+					str+="<option>请选择</option>";
+					for(var i=0;i<data.length;i++){
+							str += '<option value='+data[i]['_id']+'>'+data[i]['name']+'</option>';
+						
+						}
+					$("#province").html(str);
+				},'json'
+			);
 			mui.get(serverURL+'mobile_admin/mobile_login/get_province_in_china',
 			function(data){
 				var str="";
@@ -90,7 +107,28 @@
 		    mui.currentWebview.opener().show('none');
 		    //继续执行b页面原有的返回逻辑
 		    oldback();
-		}		
+		}	
+		//register
+		$("#register_button").click(function(){
+			var tel = $(".sign_tel").html();
+			var pwd  =  $("#sign_in_pwd").val();
+			var region = $("#area").val();
+			var apwd = $("#sign_in_apwd").val();
+			mui.get(serverURL+'mobile_admin/mobile_login/create_account',
+			{tel:tel,pwd:pwd,area_id:region,apwd:apwd},
+			function(data){
+				var id=data._id;
+					if(id){
+						mui.openWindow({
+						    url: 'provider_index.html', 
+						    id:'provider_index'
+						});
+					}else{
+						alert("信息填写有误,请重新注册！");
+					}
+				},'json'
+			);
+		})
 	</script>
 	</body>
 </html>

@@ -1,0 +1,27 @@
+.upload_brand{
+	height: 60px;
+	background: #FFFFFF;
+	color: #666666;
+	overflow: hidden;
+}
+.mui-navigate-right{
+	height: 60px;
+}
+.upload_name{
+	position: absolute;
+	left: 0;
+	top: 20px;
+}
+.upload_brand span{
+	display: block;
+}
+.upload_brand span:nth-child(1){
+	margin-top: 5px;
+}
+.upload_brand span:nth-child(2){
+	margin-top: 5px;
+}
+.upload_upgrade{
+	float: right;
+	margin-top: -35px;
+}

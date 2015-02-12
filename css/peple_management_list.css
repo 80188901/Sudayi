@@ -1,0 +1,62 @@
+.mui-navigate-right{
+	height: 60px;
+}
+
+.manage_img{
+	position: absolute;
+	top: 5px;
+	left: 0;
+	width: 50px;
+	height: 50px;
+}
+.manage_status{
+	position: absolute;
+	right: 15%;
+	top: 20px;
+}
+.manage_name{
+	position: absolute;
+	top: 20px;
+	left: 18%;
+}
+.manage_tel{
+	position: absolute;
+	top: 20px;
+	left: 34%;
+}
+
+#set{
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 10px;
+	height: 80px;
+	background: #F7F7F7;
+}
+#set span{
+	margin-left: 20px;
+	font-size: 16px;
+	font-weight: 700;
+	color: #666666;
+}
+#set .set_item{
+	height: 40px;
+	border-bottom: 1px solid #CCCCCC;
+}
+#set .set_top{
+	margin-top: 10px;
+}
+#set .set_only_top{
+	margin-top: 5px;
+	margin-right: 15px;
+}
+#set .set_left{
+	float: left;
+}
+#set .set_right{
+	float: right;
+}
+#set .set_img_top{
+	margin-top: 3px;
+	margin-right: 15px;
+}
