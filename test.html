@@ -1,33 +1,73 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	<meta charset="utf-8">
-	<title>Camera Example</title>
-	<script src="js/jquery-2.1.0.js"></script>
-	<script type="text/javascript">
+<head>
+<meta charset="utf-8">
+<title>Uploader Example</title>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+</head>
+<body >
+	<input type="button" value="Select picture frome Gallery" onclick="selectPicture();" ></input>
+	<input id="upload" type="button" value="Create upload task" onclick="createUpload();" ></input>
+	<div id="a">
+		
+	</div>
+<script type="text/javascript" >
 // 扩展API加载完毕后调用onPlusReady回调函数 
 document.addEventListener( "plusready", onPlusReady, false );
 var r = null; 
 // 扩展API加载完毕，现在可以正常调用扩展API 
 function onPlusReady() {
-	var cmr = plus.camera.getCamera();
-    cmr.captureImage(function(p) {
-        plus.io.resolveLocalFileSystemURL(p, function(entry) {
-        	 var localurl = entry.toLocalURL()
-        	 alert(localurl);
-        	 var img="<img src='"+localurl+"' width='100' height='100'>";
-        	 $("#a").append(img);
-//          appendFile(entry.fullPath); //处理图片的地方
-        }, function(e) {
-            plus.nativeUI.alert(e.message);
-        });
-    }, function(e) {}, {
-        filename: "_doc/camera/"
-    });
 }
-	</script>
-	</head>
-	<body>
-	<div id="a">11</div>
-	</body>
+
+function selectPicture() {
+	plus.gallery.pick( function (path){
+//		alert( "Success: " + path );
+//		appendFile(path);
+        var img = '<img src="'+path+'" width="100" height="100">';
+		$("#a").append(img);
+		
+	}, function ( err ) {
+		alert( "Failed: " + err.message );
+	} );
+}
+/*
+var index=1;
+function appendFile(p){
+//	alert(p);
+	
+	alert(n);
+	index++;
+}
+*/
+// 创建上传任务
+function createUpload() {
+	
+//	task.addFile( "_www/a.doc", {key:"testdoc"} );
+//	task.addData( "url","string_value");
+//	task.addData( "test",1);
+
+	//task.addEventListener( "statechanged", onStateChanged, false );
+
+	$("img").each(function(){
+		var task = plus.uploader.createUpload( "http://shop.29mins.com/product_uploader/create_cover", 
+			{ method:"POST",blocksize:204800,priority:100 },
+			function ( t, status ) {
+				// 上传完成
+				if ( status == 200 ) { 
+					alert( "Upload success: " + t.url );
+				} else {
+					alert( "Upload failed: " + status );
+				}
+			}
+		);
+		task.addData("name","Peter");
+		var p = $(this).attr("src");
+		var n=p.substr(p.lastIndexOf('/')+1);
+		task.addFile( "p", {cover_url:n} );
+		task.start();
+	})
+}
+</script>
+</body>
 </html>

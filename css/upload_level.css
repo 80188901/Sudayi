@@ -17,9 +17,46 @@
 	height: 40px;
 	line-height: 40px;
 	text-indent: 12px;
+	border-bottom: 1px solid #CCCCCC;
 }
 .mui-table-view-cell{
 	color: #999999;
 	font-size: 14px;
 }
-
+.upload_button{
+	display: block;
+	width: 90%;
+	margin:0 auto;
+	background: #2FA5CF;
+	color: #FFFFFF;
+}
+#goods_name{
+	border-radius: 0;
+	border-bottom: 1px solid #CCCCCC;
+}
+.standard{
+	display: block;
+	height: auto;
+}
+.standard dd{
+	float: left;
+}
+.standard dd:nth-child(1){
+	width: 20%;
+	/*height: 120px;*/
+	text-align: center;
+}
+.standard dd:nth-child(2){
+	width: 80%;
+	/*height: 120px;*/
+	background: #FFFFFF;
+}
+.mui-icon-trash{
+	margin-top: 20px;
+	/*margin-top: 60px;*/
+}
+input[type=text]{
+	margin: 0;
+	border: none;
+	/*border-bottom: 1px solid #CCCCCC;*/
+}

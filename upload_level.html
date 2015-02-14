@@ -10,32 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="css/upload_level.css"/>
 		<title>上传普通商品</title>
 		<script src="js/zepto.js"></script>
-		<script>
-			$(function(){
-				var width = $(window).width()/5;
-				$(".upload_img").attr('width',width);
-				$(".upload_img").attr('height',width);
-				var img='<img src="images/u28.png" alt="" width="'+width+'" height="'+width+'" class="upload_img"/>';
-				$(".img_list").on("tap",".upload_img",function(){
-					var cmr = plus.camera.getCamera();
-					var res = cmr.supportedImageResolutions[0];
-					var fmt = cmr.supportedImageFormats[0];
-					 var that=$(this)
-					cmr.captureImage(function(p) {
-				        plus.io.resolveLocalFileSystemURL(p, function(entry) {
-				        	 var localurl = entry.toLocalURL()
-				          that.attr("src",localurl);
-				          $(".img_list").append(img);
-				        }, function(e) {
-				            plus.nativeUI.alert(e.message);
-				        });
-				    }, function(e) {}, {
-				        filename: "_doc/camera/"
-				    });
-				})
-			})
-			
-		</script>
+		<script type="text/javascript" src="js/base.js"></script>
 	</head>
 	<body>
 		<header class="mui-bar mui-bar-nav">
@@ -50,8 +25,10 @@
 			</div>
 			<p class="confirm big_font">基本资料</p>
 			<div class="basics">
-				<input type="text" name="" id="" placeholder="商品名称" />
-				<input type="text" name="" id="" placeholder="商品描述"/>
+				<input type="text" name="" id="goods_name" placeholder="商品名称" />
+				<input type="text" name="" id="goods_des" placeholder="商品描述"/>
+				<input type="text" name="" class="standard_name" placeholder="规格名称.一般使用颜色、尺寸等字眼" />
+				<input type="text" name="" class="standard_price" placeholder="零售价(未扣点前的价格)"/>
 			</div>
 			<p class="confirm big_font">分类及标签</p>
 			<ul class="mui-table-view">
@@ -66,10 +43,29 @@
 			    </a>
 			  </li>
 			</ul>
-			<p class="confirm">商品规格（至少填写一种规格）</p>
-</div>
+			<!--<p class="confirm">商品规格（至少填写一种规格）</p>-->
+			<!--<div class="basics">
+				<input type="text" name="" id="goods_name" placeholder="规格名称.一般使用颜色、尺寸等字眼" />
+				<input type="text" name="" id="goods_des" placeholder="零售价(未扣点前的价格)"/>
+			</div>-->
+			<!--<dl class="standard">
+				<dd>
+					<span class="mui-icon mui-icon-trash"></span>
+				</dd>
+				<dd>
+					<input type="text" name="" id="" class="standard_name" placeholder="规格名称.一般使用颜色、尺寸等字眼" />
+					<input type="text" name="" id="" class="standard_price" placeholder="零售价(未扣点前的价格)"/>
+					<span class="little_font">买一携三</span><input type="checkbox" name="" id="" />
+					<span></span>
+					
+				</dd>
+			</dl>-->
+			<!--<div style="margin-top: 10px;background: red;">-->
+				<button onclick="upload()" class="upload_button" style="margin-top: 10px;">下一步</button>
+			<!--</div>-->
+		</div>
 		
-		
+
 		<nav class="mui-bar mui-bar-tab">
 			  <a class="mui-tab-item mui-active" href="#tabbar">
 					<span class="mui-icon mui-icon-arrowleft"></span>
@@ -84,5 +80,79 @@
 					<span class="mui-tab-label">设置</span>
 				</a>
 		</nav>
+		<script>
+		var server="http://shop.29mins.com/mobile_admin/product_upload/create_product";
+			var files=[];
+			// 上传文件
+			function upload(){
+//				alert(123);
+				if(files.length<=0){
+					plus.nativeUI.alert("没有添加上传文件！");
+					return;
+				}
+				outSet("开始上传：")
+				var wt=plus.nativeUI.showWaiting();
+				var task=plus.uploader.createUpload(server,
+					{method:"POST"},
+					function(t,status){ //上传完成
+						if(status==200){
+//							alert(123);
+							outLine("上传成功："+t.responseText);
+							plus.storage.setItem("uploader",t.responseText);
+							var w=plus.webview.create("uploader_ret.html","uploader_ret.html",{scrollIndicator:'none',scalable:false});
+							w.addEventListener("loaded",function(){
+								wt.close();
+								w.show("slide-in-right",300);
+							},false);
+						}else{
+							outLine("上传失败："+status);
+							wt.close();
+						}
+					}
+				);
+				var name = $("#goods_name").val();
+				var des  = $("#goods_des").val();
+				var strand=$(".standard_name").val();
+				var price=$(".standard_price").val();
+//				alert(standard);
+//				alert(price);
+				task.addData( "ck_name", name);
+				task.addData( "ck_des",des);
+				task.addData( "ck_price",price);
+				task.addData( "ck_spec",strand);
+				for(var i=0;i<files.length;i++){
+					var f=files[i];
+					task.addFile(f.path,{key:f.name});
+				}
+				task.start();
+			}
+			$(function(){
+			
+
+				var width = $(window).width()/5;
+				$(".upload_img").attr('width',width);
+				$(".upload_img").attr('height',width);
+				var img='<img src="images/u28.png" alt="" width="'+width+'" height="'+width+'" class="upload_img"/>';
+				$(".img_list").on("click",".upload_img",function(){
+					var that = $(this);
+					plus.gallery.pick( function (p){
+						that.attr("src",p);
+						appendFile(p);
+						$(".img_list").append(img);
+					}, function ( err ) {
+						alert( "Failed: " + err.message );
+					} );
+				})
+				
+				// 添加文件
+				var index=1;
+				function appendFile(p){
+					var n=p.substr(p.lastIndexOf('/')+1);
+					files.push({name:"uploadkey"+index,path:p});
+					index++;
+				}
+			})
+			
+		</script>
 	</body>
 </html>
